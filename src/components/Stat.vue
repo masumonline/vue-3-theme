@@ -45,7 +45,7 @@
         <div class="avatar online">
           <div class="w-16 h-16 p-1 mask mask-squircle bg-base-100">
             <img
-              src="/tailwind-css-component-profile-5@56w.png"
+              src="https://daisyui.com/tailwind-css-component-profile-5@56w.png"
               alt="Avatar Tailwind CSS Component"
               class="mask mask-squircle"
             />

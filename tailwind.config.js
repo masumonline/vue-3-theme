@@ -1,9 +1,11 @@
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  options: {
-    safelist: [
-      /data-theme$/,
-    ]
+  purge: {
+    content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+    options: {
+      safelist: [
+        /data-theme$/,
+      ]
+    },
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -18,9 +20,9 @@ module.exports = {
 
   daisyui: {
     themes: [
-      'emerald', // first one will be the default theme
-      'light', 
       'dark',
+      'emerald',
+      'light',
       'cupcake',
       'bumblebee',
       'aqua',
@@ -42,9 +44,9 @@ module.exports = {
       'cmyk',
       {
         'masum': { // custom theme
-          'primary' : '#ea5234',
-          'primary-focus' : '#d43616',
-          'primary-content' : '#dddddd',
+          'primary': '#ea5234',
+          'primary-focus': '#d43616',
+          'primary-content': '#dddddd',
           // other colors
         },
       }

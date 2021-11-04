@@ -33,7 +33,9 @@
                 <a data-set-theme="masum">Masum</a>
               </li>
               <li v-for="color in colors" :key="color">
-                <a @click="changeme(color)" :data-set-theme="color">{{ color }}</a>
+                <a @click="changeme(color)" :data-set-theme="color">{{
+                  color
+                }}</a>
               </li>
             </ul>
           </div>
@@ -79,8 +81,9 @@
 </template>
 
 <script>
-import {themeChange} from "theme-change"
-themeChange()
+import { onMounted, onUpdated, onUnmounted } from 'vue'
+import { themeChange } from "theme-change";
+
 export default {
   name: "Nav",
   data() {
@@ -112,11 +115,24 @@ export default {
       ],
     };
   },
-
+  setup() {
+    onMounted(() => {
+      themeChange(false);
+      console.log('Mounted!');
+    });
+    onUpdated(() => {
+      console.log('updated!')
+    });
+    onUnmounted(() => {
+      console.log('unmounted!')
+    });
+  },
+ 
   methods: {
     changeme(color) {
       console.log(color);
     },
   },
+
 };
 </script>
