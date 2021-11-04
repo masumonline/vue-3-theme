@@ -79,6 +79,8 @@
 </template>
 
 <script>
+import {themeChange} from "theme-change"
+themeChange()
 export default {
   name: "Nav",
   data() {
